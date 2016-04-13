@@ -16,7 +16,7 @@ static const int dx[] = { 1,1,1, 0, 0,-1,-1,-1,0 };
 static const int dy[] = { -1,1,0,-1, 1,-1, 1, 0,0 };
 
 
-bool bckt(int h, int xp, int yp)
+bool correPiranha(int h, int xp, int yp)
 {
 	if (h > 9) return false;
 
@@ -71,7 +71,7 @@ bool bckt(int h, int xp, int yp)
 				}
 
 				if (k == nE)
-					if (bckt(p, vx, vy))
+					if (correPiranha(p, vx, vy))
 						return true;
 
 				for (j = 0;j < k;j++) {
@@ -104,7 +104,7 @@ int main()
 					i = j = 9;
 				}
 
-		if (bckt(0, xp, yp))
+		if (correPiranha(0, xp, yp))
 			printf("I'm the king of the Seven Seas!\n");
 		else
 			printf("Oh no! I'm a dead man!\n");
